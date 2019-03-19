@@ -1,0 +1,229 @@
+/* Fixed with A0 layout */
+@page {
+	size: A0 portrait;
+}
+
+@media screen {
+	body {
+		background: #333333;
+	}
+
+	#page {
+		width: 841mm;
+		height: 1189mm;
+		background: #ffffff;
+		display: block;
+		margin: 2em auto 2em auto;
+		position: relative;
+		box-shadow: 0 0 2em 0 rgba(0,0,0,0.9);
+	}
+}
+
+@media print {
+	body, #page {
+		margin: 0;
+	}
+}
+
+/* Typography */
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 24pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
+}
+
+/* KU Header */
+#ku {
+	border-bottom: 1mm solid #000000;
+	height: 70mm;
+	padding: 40mm;
+}
+
+#ku_logo {
+	display: block;
+	height: 135mm;
+	position: absolute;
+	right: 40mm;
+	top: 25mm;
+}
+
+#ku h1, #ku h2 {
+	color: #666666;
+	font-family: 'Adobe Garamond Pro', 'EB Garamond', serif;
+	font-weight: 400;
+	letter-spacing: 0.25em;
+	line-height: 1.5;
+	margin: 0;
+	max-width: 80%;
+	padding: 0;
+	text-transform: uppercase;
+}
+#ku h1 { font-size: 36pt; }
+#ku h2 { font-size: 30pt; }
+
+/* Body */
+
+#body {
+	column-gap: 20mm;
+	row-gap: 10mm;
+	display: grid;
+	font-size: 24pt;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 2fr 2fr;
+	height: 847mm;
+	margin: 20mm 40mm;
+}
+
+#title {
+	color: #589632;
+	font-family: 'TruenoRegular';
+	grid-row: 1;
+	grid-column: 1 / span 2;
+}
+
+#title-a { 
+	float: left;
+	text-transform: lowercase;
+	margin-top: 10mm;
+}
+
+#title-b {
+	height: 100%;
+	float: left;
+	margin: 0 10mm 0 0;
+}
+
+#title-c {
+	display: block;
+	font-size: 96pt;
+	text-transform: lowercase;
+	margin-top: 30mm;
+}
+
+#title-d {
+	display: block;
+	font-family: 'Trueno';
+	margin: 0 20mm 0 200mm;
+}
+
+.textbox {
+	text-align: justify;
+	overflow: auto;
+}
+
+.textbox h2 {
+	font-size: 36pt;
+	text-align: center;
+}
+
+.textbox img {
+	width: 100%;
+}
+
+.textbox p {
+	margin: 0;
+	padding: 0;
+	text-indent: 1em;
+}
+
+.textbox p:first-of-type {
+	text-indent: 0 !important;
+}
+
+
+/* Footer */
+footer {
+	border-top: 1mm solid #000000;
+	color: #333333;
+	display: grid;
+	font-size: 18pt;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20mm;
+	height: 110mm;
+	padding: 20mm 40mm;
+	position: absolute;
+	bottom: 0;
+	width: 761mm;
+}
+
+footer #logos { grid-column: 2; }
+footer #acknowledgements { grid-column: 1; columns: 2; column-gap: 10mm; }
+footer #authors { grid-column: 3; }
+
+footer h2 {
+	margin: 0;
+	padding: 0;
+}
+
+#logos img {
+	display: block;
+	margin: 0 auto;
+}
+
+#logos figure {
+	color: #666666;
+	font-family: sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	height: 65mm;
+	letter-spacing: 0.2em;
+	margin: 20mm 0 0 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#davids_logo {
+	height: 25mm;
+}
+
+#cseas_logo {
+	height: 40mm;
+}
+
+#acknowledgements {
+	text-align: left;
+}
+
+#acknowledgements img {
+	display: block;
+	margin: 0 auto;
+	width: 40mm;
+}
+
+#authors {
+	text-align: right;
+}
+
+.author {
+	clear: right;
+}
+
+#authors img {
+	clear: right;
+	float: right;
+	height: 30mm;
+	margin: 0 0 3mm 5mm
+}
+
+#authors h2 {
+	font-size: 18pt;
+	text-transform: uppercase;
+}
+
+#authors p, #authors ul {
+	font-size: 18pt;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#authors li {
+	font-size: 14pt;
+	margin: 0;
+	padding: 0;
+}
+
