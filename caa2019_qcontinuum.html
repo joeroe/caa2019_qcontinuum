@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900" rel="stylesheet" />
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/trueno" type="text/css" />
+        <link rel="stylesheet" href="https://fontlibrary.org/face/trueno" type="text/css" />
         <link rel="stylesheet" href="caa2019_qcontinuum.css" />
     </head>
     <body>
@@ -20,41 +20,127 @@
             </header>
 
             <div id="body">
+
+		<img id="cloud1" src="images/freepix-cloud1.svg" />
+		<img id="cloud2" src="images/freepix-cloud2.svg" />
+		<img id="cloud3" src="images/freepix-cloud3.svg" />
+		<img id="cloud4" src="images/freepix-cloud4.svg" />
+		<img id="cloud5" src="images/freepix-cloud5.svg" />
+		<img id="cloud6" src="images/freepix-cloud6.svg" />
+		<img id="cloud7" src="images/freepix-cloud7.svg" />
+		<img id="cloud8" src="images/freepix-cloud8.svg" />
+		<img id="cloud9" src="images/freepix-cloud9.svg" />
+		<img id="cloud10" src="images/freepix-cloud10.svg" />
+		<img id="cloud11" src="images/freepix-cloud11.svg" />
+		<img id="cloud12" src="images/freepix-cloud12.svg" />
+		<img id="cloud13" src="images/freepix-cloud13.svg" />
+		<img id="cloud14" src="images/freepix-cloud14.svg" />
+		<div id="ground"></div>
+		<img id="arrow1" src="images/arrows.svg" />
+		<img id="arrow2" src="images/arrows.svg" />
+
                 <h1 id="title">
                     <span id="title-a">The</span>
                     <img src="images/qgis-icon128.svg" alt="Q" id="title-b" />
                     <span id="title-c">Continuum:</span>
                     <span id="title-d">open source GIS tools for paperless field survey</span>
                 </h1>
+
+		<div id="abstract">
+			<p>"Paperless" field documentation has been on the digital archaeologist’s agenda for over twenty years. A range of approaches have been proposed, from the straightforward application of off-the-shelf software (e.g. Filemaker, GeoODK), to full archaeological information systems (e.g. ARK, FAIMS). Despite this, we have yet to converge on a standard toolset. There appears to be a central tension between generic software, which tends to be easy to use but may lack flexibility, and systems specifically designed for archaeologists, which are full-featured but can be difficult to deploy. In this poster I outline "yet another" system for paperless recording in archaeological survey, but one which occupies a middle ground between these two approaches. It consists of a stack of open source GIS software: PostGIS, QGIS, and the newly-available mobile app QField. Running on Android devices in the field, QField natively supports the core components of survey documentation: navigation, geolocation, custom forms, photography, and planning. It seamlessly integrates with QGIS, already widely used by archaeologists, for data processing out of the field. PostGIS is used for a central database for collaboration and dissemination via webGIS. The advantage of this system is that it is flexible enough to support a full archaeological workflow, but uses easily-deployed tools that are actively maintained by a wider community of GIS developers. There are caveats, particularly in the reliance on QField, which is still in beta, but it is hoped that this approach will contribute to the eventual standardisation of digital documentation in the field archaeology.</p>
+		</div>
+
+		<div class="content tool postgis"><div class="inner">
+			<h2 class="content postgis">PostGIS</h1>
+			<h3 class="content postgis">Remote database</h3>
+			<a class="content postgis" href="https://postgis.net">postgis.net</a>
+		</div></div>
+		<img class="content image postgis" src="figures/postgis.png" />
+		<div class="content text postgis"><div>
+			<p>PostGIS is an extension for PostgreSQL that adds support for geometries, spatial indexing, and topology.</p>
+			<ul>
+				<li>Authoritative, centralised database</li>
+				<li>Wide support from desktop GIS, database and statistics software</li>
+				<li>One platform for multiple projects and spatial/nonspatial data</li>
+				<li>Basis for web mapping; for collaboration or dissemination</li>
+			</ul>
+		</div></div>
+
+		<div class="content tool qgis"><div class="inner">
+			<h2 class="content qgis">QGIS</h1>
+			<h3 class="content qgis">Basecamp GIS</h3>
+			<a class="content qgis" href="https://qgis.org">qgis.org</a>
+		</div></div>
+		<img class="content qgis" src="figures/qgis.png" />
+		<div class="content text qgis"><div>
+			<p>QGIS is versatile, open source GIS software that is already widely used by archaeologists.</p>
+			<ul>
+				<li>Synchronise field data with remote database (via geopackage)</li>
+				<li>Data cleaning and post-processing</li>
+				<li>Powerful form-builder</li>
+				<li>Manage basemaps and layer symbology for QField</li>
+			</ul>
+		</div></div>
+
+		<div class="content tool qfield"><div class="inner">
+			<h2 class="content qfield">QField</h1>
+			<h3 class="content qfield">Mobile GIS</h3>
+			<a class="content qgis" href="https://qfield.org">qfield.org</a>
+		</div></div>
+		<img class="content qfield" src="figures/qfield.png" />
+		<div class="content text qfield"><div>
+			<p>QField is a free and open source Android mobile GIS app based on QGIS.</p>
+			<ul>
+				<li>Single app for field recording</li>
+				<li>Coordinates and planning (using internal or external GNSS receiver)</li>
+				<li>Site record with forms</li>
+				<li>Photographs using in-built camera</li>
+				<li>Navigation with custom basemaps</li>
+			</ul>
+		</div></div>
+
             </div>
 
             <footer>
                 <div id="acknowledgements">
                     <h2>Acknowledgements</h2>
                     <p>I am grateful to the 2018 field crews of the Shubayqa and Razavar Valley surveys for testing the system—especially Anthony Ruter and Patrick Nørskov Pedersen—and to the project directors, Tobias Richter and Sajjad Alibaigi.</p>
+		    <ul>
+			    <li>Clouds by <a href="https://www.freepik.com/free-photos-vectors/hand">freepik.com</a></li>
+			    <li>Ground by <a href="https://www.freepik.com/free-photos-vectors/background">macrovector</a></li>
+		    </ul>
+		</div>
 
+		<div id="repro">
                     <h2>Reproducible research</h2>
-                    <p>Full source code for generating this poster can be found at <a href="https://github.com/joeroe/caa2019_qcontinuum">https://github.com/joeroe/caa2019_qcontinuum</a>.</p>
-                    <img src="images/github_qr.png" />
+                    <p>Source code and an online version of this poster can be found at <a href="https://github.com/joeroe/caa2019_qcontinuum">https://github.com/joeroe/caa2019_qcontinuum</a>.</p>
+                    <img src="images/github_qr.svg" />
                 </div>
-                <div id="logos" class="col-third">
+
+		<div id="logos">
                     <img src="images/davids_logo.svg" id="davids_logo" />
                     <figure>
                         <img src="images/cseas_logo.png" id="cseas_logo" />
                         <caption>Centre for the Study of Early<br /> Agricultural Societies</caption>
                     </figure>
                 </div>
+
                 <div id="authors">
                     <div class="author">
                         <img src="images/joe.jpg" />
                         <h2>Joe Roe</h2>
-                        <p>Research assistant, University of Copenhagen</p>
+			<p>Research assistant<br />University of Copenhagen</p>
                         <ul>
                             <li><a href="https://joeroe.io">https://joeroe.io</a></li>
                             <li><a href="mailto:jwg983@hum.ku.dk">jwg983@hum.ku.dk</a></li>
                         </ul>
                     </div>
                 </div>
+
+		<div id="q">
+			<img src="images/q_portrait.jpg" />
+			<p><em>Star Trek</em> reference →</p>
+		</div>
             </footer>
         </div>
     </body>

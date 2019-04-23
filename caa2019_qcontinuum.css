@@ -65,17 +65,123 @@ h1, h2, h3, h4, h5, h6 {
 #ku h1 { font-size: 36pt; }
 #ku h2 { font-size: 30pt; }
 
+/* Decoration */
+
+#cloud1 {
+	position: absolute;
+	top: 170mm;
+	left: 10mm;
+}
+
+#cloud2 {
+	position: absolute;
+	top: 250mm;
+	left: 160mm;
+}
+
+#cloud3 {
+	position: absolute;
+	top: 180mm;
+	left: 100mm;
+}
+
+#cloud4 {
+	position: absolute;
+	top: 250mm;
+	left: 10mm;
+}
+
+#cloud5 {
+	position: absolute;
+	top: 280mm;
+	left: 200mm;
+}
+
+#cloud6 {
+	position: absolute;
+	top: 190mm;
+	left: 710mm;
+}
+
+#cloud7 {
+	position: absolute;
+	top: 180mm;
+	left: 460mm;
+}
+
+#cloud8 {
+	position: absolute;
+	top: 260mm;
+	left: 340mm;
+}
+
+#cloud9 {
+	position: absolute;
+	top: 180mm;
+	left: 650mm;
+}
+
+#cloud10 {
+	position: absolute;
+	top: 200mm;
+	left: 540mm;
+}
+
+#cloud11 {
+	position: absolute;
+	top: 220mm;
+	left: 420mm;
+}
+
+#cloud12 {
+	position: absolute;
+	top: 240mm;
+	left: 730mm;
+}
+
+#cloud13 {
+	position: absolute;
+	top: 180mm;
+	left: 320mm;
+}
+
+#cloud14 {
+	position: absolute;
+	top: 240mm;
+	left: 450mm;
+}
+
+#ground {
+	background: url('images/macrovector-ground.svg') repeat-x;
+	background-size: auto 100%;
+	position: absolute;
+	left: 0;
+	bottom: 150mm;
+	height: 50mm;
+	width: 100%;
+}
+
+#arrow1, #arrow2 {
+	position: absolute;
+	left: 400mm;
+	width: 40mm;
+	z-index: 1000;
+}
+#arrow1 { top: 540mm; }
+#arrow2 { top: 780mm; }
+
 /* Body */
 
 #body {
-	column-gap: 20mm;
-	row-gap: 10mm;
+	background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%);
+	grid-column-gap: 10mm;
+	grid-row-gap: 10mm;
 	display: grid;
 	font-size: 24pt;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 2fr 2fr;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 2fr 2fr 2fr;
 	height: 847mm;
-	margin: 20mm 40mm;
+	padding: 20mm 40mm;
 }
 
 #title {
@@ -83,6 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'TruenoRegular';
 	grid-row: 1;
 	grid-column: 1 / span 2;
+	z-index: 999;
 }
 
 #title-a { 
@@ -92,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #title-b {
-	height: 100%;
+	height: 120mm;
 	float: left;
 	margin: 0 10mm 0 0;
 }
@@ -107,31 +214,82 @@ h1, h2, h3, h4, h5, h6 {
 #title-d {
 	display: block;
 	font-family: 'Trueno';
-	margin: 0 20mm 0 200mm;
+	margin: 0 0 0 170mm;
 }
 
-.textbox {
-	text-align: justify;
-	overflow: auto;
+#abstract {
+	display: none;
+	grid-row: 1;
+	grid-column: 3;
 }
 
-.textbox h2 {
+/* Content */
+.content.tool {
+	grid-col: 1;
+	text-align: right;
+	margin-top: 40mm;
+}
+
+.content.tool .inner {
+	background: #f0e64a;
+	float: right;
+	padding: 5mm;
+}
+
+.content.tool h2 {
+	font-size: 48pt;
+	font-family: 'TruenoBold';
+	color: #93b023;
+	margin: 0;
+}
+
+.content.tool h3 {
 	font-size: 36pt;
-	text-align: center;
+	font-family: 'Trueno';
+	font-style: italic;
+	color: #93b023;
+	margin: 0;
 }
 
-.textbox img {
+.content.tool a {
+	font-size: 30pt;
+	font-family: 'Trueno';
+	color: #93b023;
+}
+
+img.content {
+	grid-col: 2;
+	width: 90%;
+	margin: 0 auto;
+	z-index: 999;
+}
+
+img.content.qgis {
 	width: 100%;
 }
 
-.textbox p {
-	margin: 0;
-	padding: 0;
-	text-indent: 1em;
+.content.text {
+	display: grid;
+	align-items: center;
+	grid-col: 3;
+	font-size: 30pt;
+	color: #93b023;
 }
 
-.textbox p:first-of-type {
-	text-indent: 0 !important;
+.content.text p {
+	margin: 0 0 1em 0;
+}
+
+.postgis {
+	grid-row: 2;
+}
+
+.qgis {
+	grid-row: 3;
+}
+
+.qfield {
+	grid-row: 4;
 }
 
 
@@ -141,8 +299,8 @@ footer {
 	color: #333333;
 	display: grid;
 	font-size: 18pt;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20mm;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10mm;
 	height: 110mm;
 	padding: 20mm 40mm;
 	position: absolute;
@@ -150,9 +308,10 @@ footer {
 	width: 761mm;
 }
 
-footer #logos { grid-column: 2; }
-footer #acknowledgements { grid-column: 1; columns: 2; column-gap: 10mm; }
-footer #authors { grid-column: 3; }
+footer #logos { grid-column: 3; }
+footer #acknowledgements { grid-column: 1; }
+footer #repro { grid-column: 2; }
+footer #authors { grid-column: 4; }
 
 footer h2 {
 	margin: 0;
@@ -184,11 +343,11 @@ footer h2 {
 	height: 40mm;
 }
 
-#acknowledgements {
+#acknowledgements, #repro {
 	text-align: left;
 }
 
-#acknowledgements img {
+#repro img {
 	display: block;
 	margin: 0 auto;
 	width: 40mm;
@@ -205,7 +364,7 @@ footer h2 {
 #authors img {
 	clear: right;
 	float: right;
-	height: 30mm;
+	width: 40mm;
 	margin: 0 0 3mm 5mm
 }
 
@@ -227,3 +386,17 @@ footer h2 {
 	padding: 0;
 }
 
+#q img {
+	position: absolute;
+	bottom: 0;
+	right: 30mm;
+}
+
+#q p {
+	position: absolute;
+	bottom: 45mm;
+	right: 100mm;
+	font-size: 18pt;
+	color: #cccccc;
+	text-align: right;
+}
